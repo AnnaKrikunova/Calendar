@@ -1,0 +1,256 @@
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url("./fonts/Montserrat-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Montserrat-ExtraBold";
+    src: url("./fonts/Montserrat-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("./fonts/Montserrat-Regular.woff") format("woff");
+}
+
+.calendar-container {
+    margin-top: 96px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.calendar {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.calendar-header {
+    font-size: 24px;
+    background-color: #0B3157;
+}
+
+.calendar thead {
+    background: #0B3157;
+    width: 100%;
+}
+
+.calendar td {
+    width: 10%;
+}
+
+.week-day {
+    text-align: center;
+    vertical-align: center;
+    height: 40px;
+}
+
+.week-day {
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 0.5;
+    font-size: 12px;
+    font-family: Montserrat-Regular;
+}
+
+.day {
+    background: #FFFFFF;
+    cursor: pointer;
+    line-height: 45px;
+    font-size: 16px;
+    font-family: Montserrat-Bold;
+    color: #0B3157;
+    margin: 1%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.day {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+}
+
+.day-number {
+    display: flex;
+    justify-content: center;
+    line-height: 50px;
+}
+
+.different-month {
+    opacity: 0;
+}
+
+.diff-month {
+    opacity: 1;
+}
+
+/*.hasEvents {*/
+/*position: ;*/
+/**/
+/*}*/
+
+/*.hasEvents :after {*/
+/*content: "";*/
+/*position: absolute;*/
+/*width: 24px;*/
+/*height: 3px;*/
+/*background: #48C1C2;*/
+/*border-radius: 6px;*/
+/*margin-top: 35px;*/
+/*}*/
+
+.weekend {
+    color: red;
+    background: white;
+    font-size: 16px;
+    font-family: Montserrat-Bold;
+}
+
+.selected {
+    background-color: #0B3157;
+    color: #ffffff;
+    border-radius: 10%;
+}
+
+.current-day:before {
+    position: absolute;
+    content: '';
+    background-color: #FF0000;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin-left: 1px;
+    margin-top: 4px;
+}
+
+.prev, .next {
+    font-size: 12px;
+    color: #48C1C2;
+    font-family: Montserrat-Bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding-top: 12px;
+}
+
+.prev {
+    float: left;
+    padding-left: 20px;
+}
+
+.next {
+    float: right;
+    padding-right: 20px;
+}
+
+.arrow {
+    position: relative;
+    display: inline-block;
+    top: -2px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #E6EAEE;
+    border-top: 2px solid #E6EAEE;
+    transform: rotate(135deg);
+    opacity: 0.5;
+    margin-left: 7px;
+    cursor: pointer;
+}
+
+.clicked {
+    transform: rotate(316deg);
+    top: 2px;
+}
+
+.label-month {
+    color: #FFFFFF;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: Montserrat-Bold;
+}
+
+.label-month-week {
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-family: Montserrat-ExtraBold;
+}
+
+.thisWeek, .thisMonth {
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    color: #FFFFFF;
+    opacity: 0.5;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: Montserrat-Regular;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.block {
+    display: block;
+}
+
+.event-container {
+    width: 100%;
+    background-color: #45B4B7;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-top: 10px;
+    border-radius: 3px;
+    height: 60px;
+}
+
+.event-time, .event-title {
+    color: #FFFFFF;
+    font-family: Montserrat-Regular;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    line-height: 17px;
+    opacity: 0.5;
+    text-transform: uppercase;
+    padding-top: 5px;
+}
+
+.event-time {
+    float: right;
+    padding-right: 10px;
+}
+
+.event-title {
+    float: left;
+    padding-left: 10px;
+}
+
+.event-body {
+    color: #FFFFFF;
+    font-family: Montserrat-Bold;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 19px;
+    float: left;
+    position: absolute;
+    padding: 30px 0 0 10px;
+    text-transform: capitalize;
+}
+
+.event-date {
+    color: #0B3157;
+    font-family: Montserrat-ExtraBold;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    line-height: 17px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
